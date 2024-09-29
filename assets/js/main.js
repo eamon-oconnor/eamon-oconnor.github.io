@@ -169,25 +169,26 @@
 
 	// Modal Images
 		var modal = document.getElementById("myModal");
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
 
-		// Get the image and insert it inside the modal - use its "alt" text as a caption
-			var div = document.getElementById("myImg");
-			var modalImg = document.getElementById("img01");
-			var captionText = document.getElementById("caption");
-			div.onclick = function(){
-				img = this.querySelector("img")
-			  	modal.style.display = "block";
-			  	modalImg.src = img.src;
-			  	captionText.innerHTML = img.alt;
-			}
+	// Assuming all your images are inside a container with the ID 'imageContainer'
+		var imageContainer = document.getElementById("imageContainer");
 
-		// Get the <span> element that closes the modal
-			var span = document.getElementsByClassName("close")[0];
+	imageContainer.onclick = function(event) {
+    	// Check if the clicked element is an image
+    		var img = event.target.closest("img");
+    		if (img) {
+        		modal.style.display = "block";
+        		modalImg.src = img.src;
+        		captionText.innerHTML = img.alt;
+    		}
+		};
 
-		// When the user clicks on <span> (x), close the modal
-			span.onclick = function() {
-			  modal.style.display = "none";
-			}
+	// Optionally, add a function to close the modal when clicked outside of the image
+		modal.onclick = function() {
+    		modal.style.display = "none";
+		};
 
 	// IE: Fixes.
 		if (browser.name == 'ie') {
