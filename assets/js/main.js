@@ -171,8 +171,6 @@
 		var modal = document.getElementById("myModal");
 		var modalImg = document.getElementById("img01");
 		var captionText = document.getElementById("caption");
-
-	// Assuming all your images are inside a container with the ID 'imageContainer'
 		var imageContainer = document.getElementById("imageContainer");
 
 	imageContainer.onclick = function(event) {
@@ -185,7 +183,7 @@
     		}
 		};
 
-	// Optionally, add a function to close the modal when clicked outside of the image
+	// Function to close the modal when clicked outside of the image
 		modal.onclick = function() {
     		modal.style.display = "none";
 		};
