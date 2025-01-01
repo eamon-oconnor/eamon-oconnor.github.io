@@ -1330,7 +1330,6 @@ input, select, textarea {
 		color: #363636;
 		font-size: 20pt;
 		line-height: 1.75em;
-		margin: 15px;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -1521,7 +1520,7 @@ input, select, textarea {
 /* Section/Article */
 
 	section, article {
-		margin-bottom: 3em;
+		margin-bottom: 1em;
 	}
 
 		section > :last-child, section:last-child, article > :last-child, article:last-child {
