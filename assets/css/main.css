@@ -1330,7 +1330,7 @@ input, select, textarea {
 		color: #363636;
 		font-size: 20pt;
 		line-height: 1.75em;
-		margin: 15px 0;
+		margin: 15px;
 	}
 
 		@media screen and (max-width: 1680px) {
