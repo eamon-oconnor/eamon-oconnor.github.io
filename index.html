@@ -73,6 +73,23 @@
 								</header>
 								<details>
 									<summary>
+										Unsupervised Learning and Dimensionality Reduction on High-Dimensional Data
+									</summary>
+									<p>
+										The aim of this project was to investigate how linear and nonlinear dimensionality reduction techniques shape the recoverability of class structure in high-dimensional data, using the MNIST handwritten digit dataset (60,000 samples, 784 features).
+									</p>
+									<p>
+										I implemented K-means clustering from first principles, including explicit E-step assignments and M-step centroid updates, and evaluated clustering quality using purity and Gini index metrics. To examine the limits of linear structure, I implemented PCA via covariance matrix eigendecomposition and projected the data into three dimensions. The resulting embedding showed substantial overlap between digit classes, suggesting that low-dimensional linear projections preserve limited discriminative information across all ten categories.
+									</p>
+									<p>
+										I then constructed a second pipeline combining PCA (50 components) with t-SNE for nonlinear embedding, followed by DBSCAN clustering on the learned 2D representation. This approach yielded 6–7 well-separated, high-density clusters with minimal noise, indicating that nonlinear methods recover substantially more class structure than PCA alone. However, the failure to resolve all ten digit classes suggests that some categories remain entangled even in the nonlinear embedding, reflecting intrinsic overlap in the data distribution rather than purely methodological limitations.
+									</p>
+									<p>
+										Overall, this project highlights how conclusions about latent structure depend strongly on the choice of representation and clustering method, and illustrates the trade-offs between interpretability, dimensionality reduction, and cluster separability in unsupervised learning.
+									</p>
+								</details>
+								<details>
+									<summary>
 										Immune Signaling Network Analysis in Autoimmune Disease
 									</summary>
 									<p>
