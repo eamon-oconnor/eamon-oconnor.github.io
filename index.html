@@ -35,7 +35,7 @@
 							<article id="home" class="panel intro">
 								<header>
 									<h1>Eamon O'Connor</h1>
-									<p>Computational Neuroscience PhD Applicant</p>
+									<p>Researcher at Stanford School of Medicine</p>
 									<a href="images\eamon_oconnor_cv_041926.pdf" target="_blank">Curriculum Vitae</a>
 								</header>
 								<a href="#about" class="jumplink pic">
@@ -71,60 +71,18 @@
 								<header>
 									<h2>Work</h2>
 								</header>
+								<h3>
+									Microbiome–Disease Association Modeling
+								</h3>
 								<p>
-									My personal and academic research focuses on understanding how disease impacts biological systems, 
-									particularly the immune system and gut microbiome. I achieved this using scripts written in R and Python, 
-									which are available to view on my Github (linked above). I am also currently learning machine learning
-									techniques for dimensionality reduction and clustering, which I intend to apply to future professional work.
+									This project is a Python-based analytical tool designed to explore potential relationships between gut microbiome composition and disease phenotypes. By leveraging publicly available biological databases such as GMrepo, MeSH, and Ensembl, the program enables users to investigate whether specific bacterial taxa (at the genus or species level) differ in abundance between individuals with a given condition and healthy controls. The workflow is accessible via a command-line interface, where users can input one or more phenotype–microbe pairs and receive both statistical outputs and visualizations.
 								</p>
-								<section>
-									<div id="imageContainer" class="row">
-										<div id="myImg" class="col-4 col-6-medium col-12-small">
-											<a class="image fit"><img src="images/mif-sle-heatmap.png" alt="Heatmap showing the relative contribution of each immune cell type to the MIF signaling network in SLE vs. healthy control"></a>
-										</div>
-										<div id="myImg" class="col-4 col-6-medium col-12-small">
-											<a class="image fit"><img src="images/mif-sle-violin.png" alt="Violin plots showing the expression levels of MIF cytokines for immune cells in SLE vs. healthy control"></a>
-										</div>
-										<div id="myImg" class="col-4 col-6-medium col-12-small">
-											<a class="image fit"><img src="images/mif-sle-chord.png" alt="Circle plots showing the MIF interactions between immune cells in SLE vs. healthy control"></a>
-										</div>
-										<div id="myImg" class="col-4 col-6-medium col-12-small">
-											<a class="image fit"><img src="images/mif-sle-circle.png" alt="Chord plots showing the MIF interactions between immune cells in SLE vs. healthy control"></a>
-										</div>
-										<div id="myImg" class="col-4 col-6-medium col-12-small">
-											<a class="image fit"><img src="images/gal-ra-heatmap.png" alt="Heatmap showing the relative contribution of each immune cell type to the GALECTIN signaling network in RA vs. healthy control"></a>
-										</div>
-										<div id="myImg" class="col-4 col-6-medium col-12-small">
-											<a class="image fit"><img src="images/gal-ra-violin.png" alt="Violin plots showing the expression levels of GALECTIN cytokines for immune cells in RA vs. healthy control"></a>
-										</div>
-										<div id="myImg" class="col-4 col-6-medium col-12-small">
-											<a class="image fit"><img src="images/gal-ra-circle.png" alt="Chord plots showing the GALECTIN interactions between immune cells in RA vs. healthy control"></a>
-										</div>
-										<div id="myImg" class="col-4 col-6-medium col-12-small">
-											<a class="image fit"><img src="images/bifidobacterium_depression_hist.png" alt="Histogram showing the relative abundance of the Bifidobacterium genus in the gut microbiome for Depression vs. healthy control."></a>
-										</div>
-										<div id="myImg" class="col-4 col-6-medium col-12-small">
-											<a class="image fit"><img src="images/lactobacillus_parkinson-disease_hist.png" alt="Histogram showing the relative abundance of the Lactobacillus genus in the gut microbiome for Parkinson's vs. healthy control."></a>
-										</div>
-										<div id="myImg" class="col-4 col-6-medium col-12-small">
-											<a class="image fit"><img src="images/mnist_3d_clustered_hw3a.PNG" alt="MNIST dataset clustered using K-Means and reduced to 3 dimensions using PCA."></a>
-										</div>
-										<div id="myImg" class="col-4 col-6-medium col-12-small">
-											<a class="image fit"><img src="images/tsne_mnist_hw3b.PNG" alt="MNIST dataset clustered using DBScan and reduced to 2 dimensions using tSNE."></a>
-										</div>
-									</div>
-									<div id="myModal" class="modal">
-
-										<!-- The Close Button -->
-										<span class="close">&times;</span>
-									  
-										<!-- Modal Content (The Image) -->
-										<img class="modal-content" id="img01">
-									  
-										<!-- Modal Caption (Image Text) -->
-										<div id="caption"></div>
-									</div>
-								</section>
+								<p>
+									At its core, the project applies established statistical methods to assess these relationships. For each phenotype–bacteria pair, the program computes summary statistics including mean relative abundance and standard deviation for both disease and control groups. It then performs both a Welch’s t-test and a Mann–Whitney U test to evaluate whether differences between groups are statistically significant. To improve the validity of parametric testing, the tool optionally applies transformations (such as Box-Cox or logarithmic transformations) and generates diagnostic plots, including histograms and Q–Q plots, to help assess data distribution and normality.
+								</p>
+								<p>
+									The results produced by gut-brain-omics provide a quantitative framework for identifying microbiome patterns associated with neuropsychiatric conditions and, more broadly, the gut–brain axis. For example, in an analysis of Bifidobacterium abundance in individuals with depression, the tool identified significantly lower mean abundance in the disease group compared to healthy controls, with strong statistical support across both parametric and nonparametric tests. While these findings are correlational, they point to measurable biological differences that may relate to cognitive and affective processes. By integrating data retrieval, transformation, and statistical inference into a single pipeline, this project reflects a computational approach to studying complex, multilevel systems at the intersection of biology and cognition.
+								</p>
 							</article>
 					</div>
 
